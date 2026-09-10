@@ -8,68 +8,69 @@ body {
     overflow-x: hidden;
 }
 
-
-/* cabecalio */
-
+img,
+svg {
+    max-width: 100%;
+    height: auto;
+}
 
 #div01 {
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     background-image: url(imgs/home-banner.jpg.webp);
+    background-size: cover;
+    background-position: center;
 }
 
 #div02 {
-    height: 10vh;
-    background-color: rgb(0, 0, 0, 0.5);
+    min-height: 72px;
+    background-color: rgb(0 0 0 / 50%);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 24px;
+    padding: 12px 6%;
 }
 
 #divbtns {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-left: 5%;
-    width: 80%;
-    height: 10vh;
+    gap: clamp(12px, 2.5vw, 32px);
+    flex: 1;
+    min-width: 0;
 }
 
 #imgcabecalio {
     display: flex;
-    margin-left: 6%;
+    flex: 0 0 auto;
 }
 
 .btns {
     font-size: 15px;
-    color: aliceblue;
     text-decoration: none;
     font-family: "Questrial", sans-serif;
     color: white;
     display: inline-block;
-    left: 2%;
-    margin-right: 3%;
+    white-space: nowrap;
 }
 
-.btns:hover {
+.btns:hover,
+.btns:focus-visible {
     color: #fcdc00;
-    transition: 0.6s;
+    transition: 0.3s;
 }
-
 
 #div03 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20vh;
+    padding: 80px 20px 60px;
 }
 
 .ul-2-header {
-    margin-left: 100px;
     list-style: none;
 }
-
-/* Services */
 
 .tudo {
     text-align: center;
@@ -77,73 +78,52 @@ body {
 
 #texto9 {
     color: white;
-    font-size: 48px;
+    font-size: clamp(2rem, 6vw, 3rem);
     font-family: "Poppins", sans-serif;
-    font-weight: bolder;
-    padding-top: 60px;
-    margin-bottom: 2%;
-
+    font-weight: 700;
+    padding-top: 40px;
+    margin-bottom: 16px;
 }
 
-#texto10 {
-    font-size: 14px;
-    color: white;
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-
-}
-
-#texto10:hover {
-    color: #fcdc00;
-    transition: 0.5s;
-    cursor: pointer;
-}
-
-
-
+#texto10,
 #texto11 {
     font-size: 14px;
     color: white;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
-
 }
 
-#texto11:hover {
+#texto10:hover,
+#texto11:hover,
+#texto10:focus-visible,
+#texto11:focus-visible {
     color: #fcdc00;
-    transition: 0.5s;
-    cursor: pointer;
+    transition: 0.3s;
 }
 
 #alinhamento {
     width: 100%;
     display: flex;
     justify-content: center;
-
-
+    padding: 70px 20px 30px;
 }
 
 #conjunto6trem {
-    width: 80%;
-    height: 60vh;
-    margin-top: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: min(1180px, 100%);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
 }
 
 #div6btns {
-    width: 28%;
-    height: 25vh;
+    min-height: 250px;
     text-align: center;
-    border: 1px solid #eeeeee;
-    padding: 40px;
-    margin-bottom: 30px;
-    margin: 0 1% 2vh;
+    border: 1px solid #eee;
+    padding: 40px 28px;
 }
 
 #div6btns a {
-    color: #222222;
+    color: #222;
     font-size: 18px;
     font-family: "Poppins", sans-serif;
     text-decoration: none;
@@ -155,14 +135,13 @@ body {
 
 #div6btns p {
     font-family: "Poppins", sans-serif;
-    color: #777777;
+    color: #777;
     font-size: 14px;
-    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 #div6btns img {
-    margin-bottom: 3%;
-    text-align: center
+    margin-bottom: 16px;
 }
 
 #div6btns:hover {
@@ -170,133 +149,156 @@ body {
     background-color: #fcdc00;
 }
 
-/* botão do instagram e as imagens abaixo dele */
-
 #divinstagram {
     width: 100%;
-    height: 7vh;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%
+    margin-top: 50px;
 }
 
 .btninst {
     text-decoration: none;
     color: black;
     font-size: 16px;
-    margin-top: 5%;
-    padding: 1.5vh 3%;
+    padding: 14px 24px;
     background-color: #fcdc00;
 }
 
 #imgsinsta {
-    width: 75%;
-    height: 50vh;
-    margin-top: 3%;
-    margin-left: 12%;
+    width: min(1180px, calc(100% - 40px));
+    margin: 30px auto 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
-/* Fim da area do insta de imgs */
+#imgsinsta img {
+    flex: 1 1 180px;
+    max-width: 240px;
+    object-fit: cover;
+}
 
 footer {
-    height: 50vh;
+    min-height: 360px;
     background-color: #04091e;
     display: flex;
     align-items: center;
+    padding: 60px 20px;
 }
 
 .div-footer {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding-left: 10%;
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr .7fr;
+    gap: 48px;
 }
 
-.footer1 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-}
-
-.footer1>h2 {
-    color: #FFF;
-    font-size: 18px;
-}
-
-.footer1>p {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 10%;
-}
-
-.footer2 {
+.footer1,
+.footer2,
+.footer3 {
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.footer2>h2 {
-    color: #FFF;
+.footer1>h2,
+.footer2>h2,
+.footer3>h2 {
+    color: #fff;
     font-size: 18px;
 }
 
-.footer2>p {
-    color: #777777;
+.footer1>p,
+.footer2>p,
+.footer3>p {
+    color: #777;
     font-size: 14px;
-    margin-top: 10%;
-    margin-bottom: 5%;
+    margin-top: 20px;
+    line-height: 1.6;
 }
 
 .input-btn {
     display: flex;
+    margin-top: 14px;
 }
 
 .input-btn>input {
-    height: 5vh;
-    width: 20vw;
+    min-height: 44px;
+    width: min(320px, 100%);
+    border: 0;
+    padding: 0 12px;
 }
 
 .enviar-btn {
     display: flex;
-    width: 13%;
-    height: 4.95vh;
-    background-color: #FCDC00;
-    margin-left: -1%;
+    width: 52px;
+    min-height: 44px;
+    background-color: #fcdc00;
     justify-content: center;
     align-items: center;
 }
 
 .enviar-btn>svg {
-    height: 4vh;
-}
-
-.footer3 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    padding-right: 15%;
-}
-
-.footer3>h2 {
-    color: #FFF;
-    font-size: 18px;
-}
-
-.footer3>p {
-    color: #777777;
-    font-size: 14px;
-    margin-top: 20%;
-    margin-bottom: 10%;
+    height: 24px;
 }
 
 .logos-footer {
     display: flex;
-    fill: #FFF;
+    fill: #fff;
     align-items: center;
-    justify-content: space-around;
+    gap: 16px;
+    margin-top: 18px;
+}
+
+@media (max-width: 900px) {
+    #div02 {
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    #divbtns {
+        flex-basis: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    #conjunto6trem {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .div-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    #imgcabecalio {
+        margin: 0 auto;
+    }
+
+    #divbtns {
+        gap: 8px 14px;
+    }
+
+    .btns {
+        font-size: 13px;
+    }
+
+    #conjunto6trem {
+        grid-template-columns: 1fr;
+    }
+
+    #imgsinsta img {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .div-footer {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
 }
